@@ -2,10 +2,6 @@ using System;
 
 namespace observer_with_events
 {
-    public interface IObserver
-    {
-        void HandleEvent(object sender, EventArgs args);
-    }
 
     public class Observer
     {
