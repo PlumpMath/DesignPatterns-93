@@ -7,7 +7,7 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
-            var capuchino = new Capuchino();
+            var capuchino = new Capuchino(CupSize.M);
             var capuchinoWithChocolate = new Chocolate(capuchino);
             var capuchinoWithDoubleChocolate = new Chocolate(capuchinoWithChocolate);
             var capuchinoWithDoubleChocolateAndCinnamon = new Cinnamon(capuchinoWithDoubleChocolate);

@@ -4,7 +4,7 @@ namespace decorator
     {
         protected Beverage beverage;
 
-        public BeverageDecorator(Beverage beverage)
+        public BeverageDecorator(Beverage beverage) : base(beverage.GetSize())
         {
             this.beverage = beverage;
         }
@@ -25,7 +25,7 @@ namespace decorator
         }
         public override double GetCost()
         {
-            return beverage.GetCost() + 0.3;
+            return beverage.GetCost() + 0.3 * (int)beverage.GetSize();
         }
     }
 
@@ -40,7 +40,7 @@ namespace decorator
         }
         public override double GetCost()
         {
-            return beverage.GetCost() + 0.2;
+            return beverage.GetCost() + 0.2 * (int)beverage.GetSize();
         }
     }
 
@@ -55,7 +55,7 @@ namespace decorator
         }
         public override double GetCost()
         {
-            return beverage.GetCost() + 0.1;
+            return beverage.GetCost() + 0.1 * (int)beverage.GetSize();
         }
     }
 }
