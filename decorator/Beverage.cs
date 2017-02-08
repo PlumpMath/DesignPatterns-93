@@ -4,12 +4,12 @@ namespace decorator
     {
         protected string description;
         protected CupSize size;
-        public Beverage()
-        {}
+        
         public Beverage(CupSize size)
         {
             this.size = size;
         }
+        
         public CupSize GetSize()
         {
             return size;
